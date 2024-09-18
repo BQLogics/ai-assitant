@@ -99,13 +99,7 @@ class Assistant:
 
     def _create_inference_chain(self, model):
         SYSTEM_PROMPT = """
-        You are a witty assistant that will use the chat history and the image 
-        provided by the user to answer its questions.
-
-        Use few words on your answers. Go straight to the point. Do not use any
-        emoticons or emojis. Do not ask the user any questions.
-
-        Be friendly and helpful. Show some personality. Do not be too formal.
+       please translate my hand signs like a translator
         """
 
         prompt_template = ChatPromptTemplate.from_messages(
