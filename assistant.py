@@ -99,7 +99,7 @@ class Assistant:
 
     def _create_inference_chain(self, model):
         SYSTEM_PROMPT = """
-       please translate my hand signs like a translator
+       please translate my hand signs like a isl sign language translator
         """
 
         prompt_template = ChatPromptTemplate.from_messages(
@@ -132,11 +132,11 @@ class Assistant:
 
 webcam_stream = WebcamStream().start()
 
-model = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest")
+# model = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest")
 
 # You can use OpenAI's GPT-4o model instead of Gemini Flash
 # by uncommenting the following line:
-# model = ChatOpenAI(model="gpt-4o")
+model = ChatOpenAI(model="gpt-4o")
 
 assistant = Assistant(model)
 
